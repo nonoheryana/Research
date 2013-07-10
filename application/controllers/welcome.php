@@ -2,24 +2,49 @@
 
 class Welcome extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$data['title'] = "Welcome";
+		
+		$this->load->model('welcome_m');
+		
+		if(isset($_GET['cat'])){
+			$cat = $_GET['cat'];			
+		}else{
+			$cat = 0;
+		}
+		$data['news'] = $this->welcome_m->get_featured($cat, 1);
+		
+		$data['sofar'] = $this->welcome_m->get_story_sofar($data['news'][0]['id']);
+	
+		if($cat==0){
+			$data['more_news'] = $this->welcome_m->get_all();
+		}else{
+			$data['more_news'] = $this->welcome_m->get_featured($cat, 0);
+		}
+		
+		$data['featured'] = $this->welcome_m->get_all_featured();
+		
+		$this->load->view('layout/header.php', $data);	
+		$this->load->view('welcome_message', $data);
+		$this->load->view('layout/footer.php');
+	}
+	public function filter_feed(){
+		$section = $_POST['section'];
+		$this->load->model('welcome_m');
+		$data['filtered_feed'] = $this->welcome_m->get_filtered_feed($section);
+		if($section==1){
+			$data['title'] = "Latest";
+		}elseif($section==2){
+			$data['title'] = "Features";
+		}elseif($section==3){
+			$data['title'] = "Opinion";
+		}elseif($section==4){
+			$data['title'] = "News";
+		}else{
+			$data['title'] = "Other Health News";
+		}
+		$this->load->view('filtered', $data);
 	}
 }
 
