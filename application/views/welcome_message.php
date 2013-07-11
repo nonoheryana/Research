@@ -1,4 +1,4 @@
-<div class="container" style="margin-top: 5px; margin-bottom: 5px;">
+<div class="container" style="margin-top: 15px; margin-bottom: 5px;">
 	
 			
 				<?php
@@ -132,18 +132,8 @@
 					
 			  		print "<h4><a href='".base_url()."index.php/article?id=".$item['id']."'>".$item['title']."</a></h4>";
 					print "<p href='".base_url()."index.php/article?id=".$item['id']."'>".$description."</p><br />";
-					print '<div class="article-meta">Posted '.$lapse.'&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Category: <a href="'.base_url().'index.php/archive?cat='.$item['cat_id'].'">'.$item['cat_name'].'</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a id="share-trigger'.$items.'">Share<i class="icon-share-alt" style="margin-left: 5px"></i></a>';
-					print "<div id='share-popup".$items."' style='display:inline'>
-					<script>
-					$(function() {
-					$('div#share-popup".$items."').hide();
-					});
-					</script>";
-					?>
-		<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo base_url()."index.php/article?id=".$item['id'];?>" data-via="the-star">Tweet</a>
-		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>			
-					<?php 
-					print "</div>";
+					print '<div class="article-meta">Posted '.$lapse.'&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Category: <a href="'.base_url().'index.php/archive?cat='.$item['cat_id'].'">'.$item['cat_name'].'</a>';
+				
 					print '</div>';
 					print "<hr />";
 
@@ -155,10 +145,12 @@
 		</div>
 		<div class="span3 sidebar_widget2">
 			<div class="row-header"><h4>Contribute</h4></div>
+			You can contribute an article <a href="">here</a>
 			<hr />
 			<div style="text-align:center">
 				<img src="<?php echo base_url();?>assets/img/oi.png" width="200px">
 			</div>
+			<hr />
 			<div class="social_media_icons">
 				<img src="<?php echo base_url();?>assets/img/facebook.png" style="height:32px;width:32px">
 				<a href="https://twitter.com/TheStarKenya"><img src="<?php echo base_url();?>assets/img/twitter.png" style="height:32px;width:32px"></a>

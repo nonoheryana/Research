@@ -26,6 +26,7 @@ class Welcome extends CI_Controller {
 		$data['featured'] = $this->welcome_m->get_all_featured();
 		
 		$this->load->view('layout/header.php', $data);	
+		$this->load->view('layout/header_widgets', $data);
 		$this->load->view('welcome_message', $data);
 		$this->load->view('layout/footer.php');
 	}

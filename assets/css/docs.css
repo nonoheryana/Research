@@ -181,8 +181,9 @@ overflow: hidden;
 }
 
 .row-header {
-  border-bottom: 6px #bdc3c7 solid;
+  /*border-bottom: 6px #bdc3c7 solid;
   border-top: 6px #bdc3c7 solid;
+  */
   margin-bottom: 10px;
   text-align: center;
 }
