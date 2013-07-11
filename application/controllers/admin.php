@@ -15,11 +15,27 @@ class Admin extends CI_Controller {
 	{
 			$data['page_title'] = 'Admin Dashboard';
 				
-			//get stats
+			//get items
+			$this->load->model('welcome_m');
+			if(isset($_GET['category'])){
+				$cat = $_GET['category'];
+				$section = $_GET['section'];
+				$data['filtered_feed'] = $this->welcome_m->get_filtered_feed_cat($section,$cat);
+			}else{
+				$data['filtered_feed'] = $this->welcome_m->get_all();
+			}
+			//
 			$this->load->model('admin_model');
-			
+			$data['sections'] = $this->admin_model->get_sections();
+			$data['categories'] = $this->admin_model->get_categories();
 			$this->load->view('admin/header_admin',$data);
 			$this->load->view('admin/admin', $data);
+			$this->load->view('admin/footer', $data);
+	}
+	public function add_document(){
+			$data['page_title'] = 'Add document';			
+			$this->load->view('admin/header_admin',$data);
+			$this->load->view('admin/add_document', $data);
 			$this->load->view('admin/footer', $data);
 	}
 	

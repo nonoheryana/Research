@@ -25,7 +25,7 @@
           <ul class="nav">
             <li><a href="<?php echo base_url()?>index.php/admin/">Home</a></li>
             <li class="divider-vertical" style="border-right-width: 1px; border-right-style: solid; border-right-color: rgb(198, 198, 198); background-color: rgb(255, 255, 255); height: 41px;"></li>
-             <li><a href="<?php echo base_url()?>index.php/">Add Dcoument</a></li>
+             <li><a href="<?php echo base_url()?>index.php/admin/add_document">Add Dcoument</a></li>
           
          
           <ul class="nav pull-right">

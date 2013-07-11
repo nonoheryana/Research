@@ -117,7 +117,11 @@ class Welcome_m extends CI_Model {
 	}else{
 	$this->db->where("news.section", $section);	
 	}
+	if($cat=="0"){
+		
+	}else{
 	$this->db->where("news.category", $cat);
+	}
 	$result = $this->db->get();
 	return $result->result_array();
 
