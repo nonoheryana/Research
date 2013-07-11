@@ -1,7 +1,5 @@
 <div class="container" style="margin-top: 15px; margin-bottom: 5px;">
-	
-			
-				<?php
+	<?php
 					function first_paragraph($content) {
 
 						$pos = strpos($content, '[p]');
@@ -9,10 +7,6 @@
 					   
 					}
 				  ?>
-			
-		
-		
-	
 	<div class="row-fluid" style="min-height:600px;margin-top:65px;">
 		<div class="span3 sidebar_widget2">
 
@@ -169,7 +163,7 @@
 		</div>
 		<div class="span3 sidebar_widget2">
 			<div class="row-header"><h4>Contribute</h4></div>
-			You can contribute an article <a href="">here</a>
+			You can contribute an article <a href="<?php echo base_url()?>index.php/add_doc">here</a>
 			<hr />
 			<div style="text-align:center">
 				<img src="<?php echo base_url();?>assets/img/oi.png" width="200px">

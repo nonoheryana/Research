@@ -48,6 +48,35 @@ class Welcome extends CI_Controller {
 		}
 		$this->load->view('filtered', $data);
 	}
+	public function add_document(){
+			$this->load->model('admin_model');
+			
+			$data['sections'] = $this->admin_model->get_sections();
+			$data['categories'] = $this->admin_model->get_categories();
+			
+			$data['title'] = 'Add document';			
+			
+			$this->load->view('layout/header',$data);
+			$this->load->view('layout/header_widgets', $data);
+			$this->load->view('add_document', $data);
+			
+			$this->load->view('layout/footer', $data);
+	}
+	public function add_documents_process(){
+			$this->load->model('admin_model');
+			$data['result'] = $this->admin_model->process_add($_POST, $_FILES);
+		
+			$data['sections'] = $this->admin_model->get_sections();
+			$data['categories'] = $this->admin_model->get_categories();
+			
+			$data['title'] = 'Add document';			
+			
+			$this->load->view('layout/header',$data);
+			$this->load->view('layout/header_widgets', $data);
+			$this->load->view('add_document', $data);
+			
+			$this->load->view('layout/footer', $data);
+	}
 }
 
 /* End of file welcome.php */
