@@ -60,16 +60,19 @@
                 <a href="<?php echo base_url()?>">Home</a>
               </li>
               <li>
-                <a href="">Agriculture</a>
+                <a href="<?php echo base_url()?>?cat=1">Agriculture</a>
               </li>
 <li>
-                <a href="">Education</a>
+                <a href="<?php echo base_url()?>?cat=2">Education</a>
               </li>
 <li>
-                <a href="">Water</a>
+                <a href="<?php echo base_url()?>?cat=3">Water</a>
+              </li>
+              <li>
+                <a href="<?php echo base_url()?>?cat=5">Health</a>
               </li>
 <li>
-                <a href="">Counties</a>
+                <a href="<?php echo base_url()?>?cat=4">Counties</a>
               </li>
               <!-- <li class="divider-vertical">
                 <a href="">Bogus Drs</a>
