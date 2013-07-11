@@ -62,16 +62,7 @@ $('div#share-popup".$items."').hide();
 			  		print "<h4><a href='".base_url()."index.php/article?id=".$item['id']."'>".$item['title']."</a></h4>";
 					print "<div style='text-align:justify;'><a href='".base_url()."index.php/article?id=".$item['id']."'>".$description."</a></div><br />";
 					print '<div style="font-size:0.8em;color:#24408F;font-weight:bold">Posted '.$lapse.'&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Category: <a href="'.base_url().'index.php/archive?cat='.$item['cat_id'].'">'.$item['cat_name'].'</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a id="share-trigger'.$items.'">Share<i class="icon-share"></i></a>';
-					print "<div id='share-popup".$items."' style='display:inline'>
-					<script>
-					$(function() {
-					$('div#share-popup".$items."').hide();
-					});
-					</script>";
-					?>
-		<a href="https://twitter.com/share" class="twitter-share-button" data-url="<?php echo base_url()."index.php/article?id=".$item['id'];?>" data-via="the-star">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>			
-					<?php 
+			
 					print "</div>";
 					print '</div>';
 					print "<hr />";
