@@ -29,7 +29,12 @@ class Welcome extends CI_Controller {
 	public function filter_feed(){
 		$section = $_POST['section'];
 		$this->load->model('welcome_m');
+		if(isset($_POST['cat'])){
+		$cat = $_POST['cat'];
+		$data['filtered_feed'] = $this->welcome_m->get_filtered_feed_cat($section,$cat);
+		}else{
 		$data['filtered_feed'] = $this->welcome_m->get_filtered_feed($section);
+		}
 		if($section==1){
 			$data['title'] = "Latest";
 		}elseif($section==2){

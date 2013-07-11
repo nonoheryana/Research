@@ -43,24 +43,48 @@
 				    }
 				  }
                 }
-             
+             function filter_feed_cat(section, cat) {
+                	document.getElementById("filtered").innerHTML = "";
+                	document.getElementById("chev0").style.display='none';
+                	document.getElementById("chev1").style.display='none';
+					document.getElementById("chev2").style.display='none';
+					document.getElementById("chev3").style.display='none';
+					document.getElementById("chev4").style.display='none';
+					document.getElementById("chev"+section).style.display='block';
+                   var file = "<?php echo base_url();?>index.php/welcome/filter_feed";
+				
+				  var request =  get_XmlHttp();
+				  document.getElementById("filtered").innerHTML = "";
+				 
+				  var the_data = 'section='+section+'&cat='+cat;
+				  request.open("POST", file, true);
+					
+				  request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				  request.send(the_data);
+				  
+				  request.onreadystatechange = function() {
+				  if (request.readyState == 4) {
+				      document.getElementById("filtered").innerHTML = request.responseText;
+				    }
+				  }
+                }
         </script>
 			<table class="table table-striped feed-filters">
 				<tbody>
 					<tr>
-						<td><a onclick="filter_feed(0);">All</a><i class="icon-chevron-right" id="chev0"></i></td>
+						<td><a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(0, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(0);"';}?>>All</a><i class="icon-chevron-right" id="chev0"></i></td>
 					</tr>
 					<tr>
-						<td><a onclick="filter_feed(1);">Latest</a><i class="icon-chevron-right" id="chev1"></i></td>
+						<td><a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(1, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(1);"';}?>>Latest</a><i class="icon-chevron-right" id="chev1"></i></td>
 					</tr>
 					<tr>
-						<td><a onclick="filter_feed(2);">Features</a><i class="icon-chevron-right" id="chev2"></i></td>
+						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(2, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(2);"';}?>>Features</a><i class="icon-chevron-right" id="chev2"></i></td>
 					</tr>
 					<tr>
-						<td><a onclick="filter_feed(3);">Opinion</a><i class="icon-chevron-right" id="chev3"></i></td>
+						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(3, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(3);"';}?>>Opinion</a><i class="icon-chevron-right" id="chev3"></i></td>
 					</tr>
 					<tr>
-						<td><a onclick="filter_feed(4);">News</a><i class="icon-chevron-right" id="chev4"></i></td>
+						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(4, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(4);"';}?>>News</a><i class="icon-chevron-right" id="chev4"></i></td>
 					</tr>
 				</tbody>
 			</table>
