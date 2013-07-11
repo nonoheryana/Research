@@ -163,7 +163,7 @@
 		</div>
 		<div class="span3 sidebar_widget2">
 			<div class="row-header"><h4>Contribute</h4></div>
-			You can contribute an article <a href="<?php echo base_url()?>index.php/add_doc">here</a>
+			You can contribute an article <a href="<?php echo base_url()?>index.php/welcome/add_document">here</a>
 			<hr />
 			<div style="text-align:center">
 				<img src="<?php echo base_url();?>assets/img/oi.png" width="200px">
