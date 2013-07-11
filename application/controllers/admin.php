@@ -33,7 +33,25 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/footer', $data);
 	}
 	public function add_document(){
+			$this->load->model('admin_model');
+			$data['sections'] = $this->admin_model->get_sections();
+			$data['categories'] = $this->admin_model->get_categories();
+			
 			$data['page_title'] = 'Add document';			
+			
+			$this->load->view('admin/header_admin',$data);
+			$this->load->view('admin/add_document', $data);
+			$this->load->view('admin/footer', $data);
+	}
+	public function add_documents_process(){
+			$this->load->model('admin_model');
+			$data['result'] = $this->admin_model->process_add($_POST, $_FILES);
+		
+			$data['sections'] = $this->admin_model->get_sections();
+			$data['categories'] = $this->admin_model->get_categories();
+			
+			$data['page_title'] = 'Add document';			
+			
 			$this->load->view('admin/header_admin',$data);
 			$this->load->view('admin/add_document', $data);
 			$this->load->view('admin/footer', $data);
