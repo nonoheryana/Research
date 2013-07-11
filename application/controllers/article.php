@@ -17,4 +17,12 @@ class Article extends CI_Controller {
 		$this->load->view('article', $data);
 		$this->load->view('layout/footer.php');
 	}
+	public function view(){
+		$article = $_GET['id'];
+		$this->load->model('article_m');
+		$story = $this->article_m->get_article($article);
+		
+		$data['document'] = $story[0]['document'];
+		$this->load->view('view_doc', $data);
+	}
 }
