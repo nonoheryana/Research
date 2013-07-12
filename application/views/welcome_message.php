@@ -19,6 +19,7 @@
 					document.getElementById("chev2").style.display='none';
 					document.getElementById("chev3").style.display='none';
 					document.getElementById("chev4").style.display='none';
+					document.getElementById("chev5").style.display='none';
 					document.getElementById("chev"+section).style.display='block';
                    var file = "<?php echo base_url();?>index.php/welcome/filter_feed";
 				
@@ -44,6 +45,7 @@
 					document.getElementById("chev2").style.display='none';
 					document.getElementById("chev3").style.display='none';
 					document.getElementById("chev4").style.display='none';
+					document.getElementById("chev5").style.display='none';
 					document.getElementById("chev"+section).style.display='block';
                    var file = "<?php echo base_url();?>index.php/welcome/filter_feed";
 				
@@ -69,16 +71,19 @@
 						<td><a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(0, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(0);"';}?>>All</a><i class="icon-chevron-right" id="chev0"></i></td>
 					</tr>
 					<tr>
-						<td><a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(1, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(1);"';}?>>Latest</a><i class="icon-chevron-right" id="chev1"></i></td>
+						<td><a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(1, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(1);"';}?>>International treaties</a><i class="icon-chevron-right" id="chev1"></i></td>
 					</tr>
 					<tr>
-						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(2, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(2);"';}?>>Features</a><i class="icon-chevron-right" id="chev2"></i></td>
+						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(2, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(2);"';}?>>Constitution of Kenya</a><i class="icon-chevron-right" id="chev2"></i></td>
 					</tr>
 					<tr>
-						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(3, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(3);"';}?>>Opinion</a><i class="icon-chevron-right" id="chev3"></i></td>
+						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(3, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(3);"';}?>>Laws of Kenya</a><i class="icon-chevron-right" id="chev3"></i></td>
 					</tr>
 					<tr>
-						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(4, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(4);"';}?>>News</a><i class="icon-chevron-right" id="chev4"></i></td>
+						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(4, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(4);"';}?>>Papers & Articles</a><i class="icon-chevron-right" id="chev4"></i></td>
+					</tr>
+					<tr>
+						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(5, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(5);"';}?>>Policies and Guidelines</a><i class="icon-chevron-right" id="chev5"></i></td>
 					</tr>
 				</tbody>
 			</table>
@@ -88,7 +93,7 @@
 		document.getElementById("chev2").style.display='none';
 		document.getElementById("chev3").style.display='none';
 		document.getElementById("chev4").style.display='none';
-		
+		document.getElementById("chev5").style.display='none';
 		</script>
 		<div class="span6 newsfeed" id="filtered">
 			<?php
