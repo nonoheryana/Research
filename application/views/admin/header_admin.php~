@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,400italic,700,700italic">
 <link rel="stylesheet" href="http://pixelcave.com/demo/flatapp/css/plugins-1.2.css">
 <link rel="stylesheet" href="http://pixelcave.com/demo/flatapp/css/bootstrap.css">
-<link rel="stylesheet" href="<?php echo base_url()?>assets/css/main-1.2.css">
+<link rel="stylesheet" href="http://pixelcave.com/demo/flatapp/css/main-1.2.css">
 <link rel="stylesheet" href="http://pixelcave.com/demo/flatapp//css/themes.css">
 <script type="text/javascript" async="" src="./dashboard_files/ga.js" style=""></script><script src="./dashboard_files/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <style type="text/css">.jqstooltip { position: absolute;left: 0px;top: 0px;visibility: hidden;background: rgb(0, 0, 0) transparent;background-color: rgba(0,0,0,0.6);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";color: white;font: 10px arial, san serif;text-align: left;white-space: nowrap;padding: 5px;border: 1px solid white;z-index: 10000;}.jqsfield { color: white;font: 10px arial, san serif;text-align: left;}</style><script type="text/javascript" charset="UTF-8" src="./dashboard_files/{common,util,stats}.js"></script><script type="text/javascript" charset="UTF-8" src="./dashboard_files/AuthenticationService.Authenticate"></script></head>
@@ -34,7 +34,7 @@
 <input type="text" id="search-term" name="search-term" placeholder="Search..">
 </form>
 <a href="" class="brand">
-CSO Research
+KORDES
 </a>
 <div id="loading" class="hide"><i class="icon-spinner icon-spin"></i></div>
 </div>
@@ -56,7 +56,7 @@ CSO Research
 <div class="mini-profile-options">
 
 </div>
-<img src="<?php echo base_url();?>assets/img/logo.png" class="img-circle">
+<img src="<?php echo base_url();?>assets/img/rose.png" class="img-circle">
 
 </div>
 <div class="sidebar-tabs-con">
@@ -65,8 +65,14 @@ CSO Research
 <div class="tab-pane active" id="side-tab-menu">
 <nav id="primary-nav">
 <ul>
-<li><a href="<?php echo base_url();?>index.php/admin">Dashboard</a></li>
-<li><a href="<?php echo base_url();?>index.php/admin/add_document">Add Document</a></li>
+<li><a href="<?php echo base_url();?>index.php">Dashboard</a></li>
+ <li><a href="<?php echo base_url()?>index.php/consolidate/view">Consolidate Orders</a></li>
+<li><a href="<?php echo base_url();?>index.php/batch/view">Batches</a></li>
+<li><a href="<?php echo base_url();?>index.php/orders/view">Orders</a></li>
+<li><a href="<?php echo base_url();?>index.php/customers/view">Customers</a><li>
+<li><a href="<?php echo base_url();?>index.php/propagators/view">Propagators</a></li>
+<li><a href="<?php echo base_url()?>index.php/growers/view">Growers</a></li>
+<li><a href="<?php echo base_url()?>index.php/varieties/view">Varieties</a></li>
 <li><?php echo anchor('user/logout', 'Logout'); ?></li>
 </ul>
 </nav>

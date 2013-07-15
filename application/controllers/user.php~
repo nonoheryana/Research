@@ -13,7 +13,7 @@ class User extends CI_Controller{
   }
   else{
    $data['page_title']= 'Home';
-   $this->load->view('admin/header',$data);
+   //$this->load->view('admin/header',$data);
    $this->load->view("admin/registration_view.php", $data);
    //$this->load->view('admin/footer',$data);
   }
