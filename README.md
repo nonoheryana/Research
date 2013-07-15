@@ -1,2 +1,2 @@
-<h1>StarHealth</h1>
-A suite of applications including news aggregation around healthcare in Kenya
+<h1>Research</h1>
+A research portal for CSOs
