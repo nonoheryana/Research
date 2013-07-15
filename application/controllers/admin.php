@@ -77,5 +77,13 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/add_document', $data);
 			$this->load->view('admin/footer', $data);
 	}
+	public function edit_documents_process(){
+			$id = $_POST['id'];
+			$this->load->model('admin_model');
+			$data['result'] = $this->admin_model->edit($_POST, $_FILES);
+			
+			//now redirect to the edit page
+			redirect(base_url().'index.php/admin_article?id='.$id);
+	}
 	
 }
