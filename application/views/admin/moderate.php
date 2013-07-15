@@ -96,9 +96,9 @@ document.getElementById("frm1").submit();
 					});</script>";
 					
 			  		print "<h4><a href='".base_url()."index.php/admin_article?id=".$item['id']."'>".$item['title']."</a></h4>";
+			  		print '<a href="'.base_url().'index.php/admin_article/publish?id='.$item['id'].'">Publish</a> | <a href="'.base_url().'index.php/admin_article/delete?id='.$item['id'].'">Delete</a> | <a href="'.base_url().'index.php/admin_article/edit?id='.$item['id'].'">Edit</a>';
 					print "<p href='".base_url()."index.php/admin_article?id=".$item['id']."'>".$description."</p><br />";
 					print '<div class="article-meta">Posted '.$lapse.'&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Category: <a href="'.base_url().'?cat='.$item['cat_id'].'">'.$item['cat_name'].'</a>';
-					print ' | <a href="'.base_url().'index.php/admin_article/publish?id='.$item['id'].'">Publish</a> | <a href="'.base_url().'index.php/admin_article/delete?id='.$item['id'].'">Delete</a> | Edit';
 					print '</div>';
 					print "<hr />";
 
