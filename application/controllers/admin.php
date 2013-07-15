@@ -32,6 +32,27 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/admin', $data);
 			$this->load->view('admin/footer', $data);
 	}
+	public function moderate()
+	{
+			$data['page_title'] = 'Moderate Articles';
+				
+			//get items
+			$this->load->model('welcome_m');
+			if(isset($_GET['category'])){
+				$cat = $_GET['category'];
+				$section = $_GET['section'];
+				$data['filtered_feed'] = $this->welcome_m->get_filtered_feed_cat0($section,$cat);
+			}else{
+				$data['filtered_feed'] = $this->welcome_m->get_all0();
+			}
+			//
+			$this->load->model('admin_model');
+			$data['sections'] = $this->admin_model->get_sections();
+			$data['categories'] = $this->admin_model->get_categories();
+			$this->load->view('admin/header_admin',$data);
+			$this->load->view('admin/moderate', $data);
+			$this->load->view('admin/footer', $data);
+	}
 	public function add_document(){
 			$this->load->model('admin_model');
 			$data['sections'] = $this->admin_model->get_sections();

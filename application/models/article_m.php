@@ -14,4 +14,7 @@ class Article_m extends CI_Model {
 		$story = $result->result_array();
 		return $story;
 	}
+	public function publish($id){
+		$this->db->query("update news set active='1' where id='$id'");
+	}
 }

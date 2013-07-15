@@ -18,7 +18,7 @@ class User_model extends CI_Model {
     $newdata = array(
       'user_id'  => $rows->id,
       'user_name'  => $rows->username,
-      'user_email'    => $rows->email,
+      'user_email'    => $rows->email,            'is_admin' => 1,
       'logged_in'  => TRUE,
     );
    }

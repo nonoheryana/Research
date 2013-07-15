@@ -66,6 +66,7 @@ CSO Research
 <nav id="primary-nav">
 <ul>
 <li><a href="<?php echo base_url();?>index.php/admin">Dashboard</a></li>
+<li><a href="<?php echo base_url();?>index.php/admin/moderate">Moderate</a></li>
 <li><a href="<?php echo base_url();?>index.php/admin/add_document">Add Document</a></li>
 <li><?php echo anchor('user/logout', 'Logout'); ?></li>
 </ul>

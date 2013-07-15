@@ -17,12 +17,22 @@ class Admin_article extends CI_Controller {
 		$this->load->view('admin/article', $data);
 		$this->load->view('admin/footer.php');
 	}
-	public function view(){
+	public function view()
+	{
 		$article = $_GET['id'];
 		$this->load->model('article_m');
 		$story = $this->article_m->get_article($article);
 		
 		$data['document'] = $story[0]['document'];
 		$this->load->view('view_doc', $data);
+	}
+	public function publish(){
+		$id = $_GET['id'];
+		
+		$this->load->model('article_m');
+		$this->article_m->publish($id);
+		
+		redirect(base_url().'/index.php/admin/moderate');
+
 	}
 }
