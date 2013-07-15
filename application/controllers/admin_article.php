@@ -35,4 +35,12 @@ class Admin_article extends CI_Controller {
 		redirect(base_url().'/index.php/admin/moderate');
 
 	}
+	public function delete(){
+		$id = $_GET['id'];
+		
+		$this->load->model('article_m');
+		$this->article_m->delete($id);
+		
+		redirect(base_url().'/index.php/admin/moderate');
+	}
 }

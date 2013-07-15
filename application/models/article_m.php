@@ -17,4 +17,7 @@ class Article_m extends CI_Model {
 	public function publish($id){
 		$this->db->query("update news set active='1' where id='$id'");
 	}
+	public function delete($id){
+		$this->db->query("delete from news where id='$id'");
+	}
 }
