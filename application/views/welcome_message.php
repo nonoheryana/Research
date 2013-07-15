@@ -96,8 +96,30 @@
 		document.getElementById("chev5").style.display='none';
 		</script>
 		<div class="span6 newsfeed" id="filtered">
-			<?php
-			
+<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>assets/css/datatable.css"/>
+<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>assets/css/jquerycustom.css"/>
+<script src="<?php echo base_url();?>assets/js/jqueryd.js"></script>
+<script src="<?php echo base_url();?>assets/js/jdatatables.js"></script>
+    
+	<script type="text/javascript" charset="utf-8">
+			$(document).ready(function() {
+				oTable = $('#example').dataTable({
+					"bJQueryUI": true,
+					"sPaginationType": "full_numbers"
+				});
+			} );
+		</script>
+<div class="demo_jui">
+	<table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
+		<thead>
+			<tr>
+				
+				<th><a id="files">Documents</a></th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<?php 		
 			$items=0;
 			  	foreach($more_news as $item){
 			  		if($items<6){
@@ -128,44 +150,27 @@
 					//end timeplay
 
 					$description = first_paragraph($item['content']);
-
-					print "<style type='text/css'>div#share-popup".$items." {
-						position: absolute;
-						max-width: 200px;
-						margin-left: 5px;
-						padding-top: 10px;
-						padding-left: 5px;
-						padding-right:5px;
-						padding-bottom: 5px;
-						background: #fefefe;
-						border: 1px #d1d1d1 solid;
-						font-size: 12px;
-					}	</style>";
-					print "<script>
-					$('body').click(function(){
-						$('div#share-popup".$items."').hide();
-						});
-					$(function() {
-					  $('a#share-trigger".$items."').hover(function() {
-						$('div#share-popup".$items."').show();
-						}, function() {
-						$('div#share-popup".$items."').hide();
-					  });
-					});</script>";
-					
+					print "<tr class='gradeA'><td>";
 			  		print "<h4><a href='".base_url()."index.php/article?id=".$item['id']."'>".$item['title']."</a></h4>";
 					print "<p href='".base_url()."index.php/article?id=".$item['id']."'>".$description."</p><br />";
 					print '<div class="article-meta">Posted '.$lapse.'&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Category: <a href="'.base_url().'?cat='.$item['cat_id'].'">'.$item['cat_name'].'</a>';
 				
 					print '</div>';
-					print "<hr />";
+					print "<hr /></td>
+				</tr>";
 
 					$items++;
 					
 					}
 			  	}
 				?>
-		</div>
+		</tbody>
+	</table>
+</div>
+
+
+</div>
+		
 		<div class="span3 sidebar_widget2">
 			<div class="row-header"><h4>Contribute</h4></div>
 			You can contribute an article <a href="<?php echo base_url()?>index.php/welcome/add_document">here</a>

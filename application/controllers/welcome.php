@@ -25,6 +25,7 @@ class Welcome extends CI_Controller {
 		$this->load->view('layout/header_widgets', $data);
 		$this->load->view('welcome_message', $data);
 		$this->load->view('layout/footer.php');
+		
 	}
 	public function filter_feed(){
 		$section = $_POST['section'];
