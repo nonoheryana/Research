@@ -1,10 +1,10 @@
 </div>
 <footer>
 <div class="pull-right">
-<i class="icon-heart"></i> Kordes Systems<strong></strong>
+<i class="icon-heart"></i> Open Institute<strong></strong>
 </div>
 <div class="pull-left">
-    <span id="year-copy">2013</span> © <strong><a href="">Kordes</a></strong>
+    <span id="year-copy">2013</span> © <strong><a href="">Open Institute</a></strong>
 </div>
 </footer>
 </div>

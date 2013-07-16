@@ -128,12 +128,13 @@ table.display thead th div.DataTables_sort_wrapper span {
 .dataTables_length {
 	width: 40%;
 	float: left;
+	display:none;
 }
 
 .dataTables_filter {
-	width: 50%;
-	float: right;
-	text-align: right;
+	width: 100%;
+	/*float: right;
+	text-align: right;*/
 }
 
 .dataTables_info {
@@ -393,7 +394,8 @@ tr.even td.sorting_3 {
 	  ee > e2
  */
 tr.odd.gradeA td.sorting_1 {
-	background-color: #c4ffc4;
+	/*background-color: #c4ffc4;*/
+	background-color:#fff;
 }
 
 tr.odd.gradeA td.sorting_2 {
@@ -405,7 +407,8 @@ tr.odd.gradeA td.sorting_3 {
 }
 
 tr.even.gradeA td.sorting_1 {
-	background-color: #d5ffd5;
+	/*background-color: #d5ffd5;*/
+	background-color:#DADBDC;
 }
 
 tr.even.gradeA td.sorting_2 {

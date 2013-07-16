@@ -2,9 +2,9 @@
       <div class="navbar-inner">
         <div class="container">
 			     <p>
-              Copyright (c) 2013 <a href="http://the-star.co.ke" target="_blank">the Star</a> 
-              | Built by <a href="http://code4kenya.org" target="_blank">Code4Kenya</a> 
-              | Available on <a href="http://github.com/CodeForAfrica/StarHealth" target="_blank">Github</a>
+              Copyright (c) 2013 <a href="http://the-star.co.ke" target="_blank">Open Institute</a> 
+              | Built by <a href="http://code4kenya.org" target="_blank">Open Institute</a> 
+              | Available on <a href="http://github.com/OpenInstitute/Research" target="_blank">Github</a>
             </p>
         </div>
       </div>

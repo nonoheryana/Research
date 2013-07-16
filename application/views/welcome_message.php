@@ -95,29 +95,12 @@
 		document.getElementById("chev4").style.display='none';
 		document.getElementById("chev5").style.display='none';
 		</script>
+		
 		<div class="span6 newsfeed" id="filtered">
-<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>assets/css/datatable.css"/>
-<link type="text/css" rel="stylesheet" href="<?php echo base_url();?>assets/css/jquerycustom.css"/>
-<script src="<?php echo base_url();?>assets/js/jqueryd.js"></script>
-<script src="<?php echo base_url();?>assets/js/jdatatables.js"></script>
-    
-	<script type="text/javascript" charset="utf-8">
-			$(document).ready(function() {
-				oTable = $('#example').dataTable({
-					"bJQueryUI": true,
-					"sPaginationType": "full_numbers"
-				});
-			} );
-		</script>
+
 <div class="demo_jui">
-	<table cellpadding="0" cellspacing="0" border="0" class="display" id="example">
-		<thead>
-			<tr>
-				
-				<th><a id="files">Documents</a></th>
-				
-			</tr>
-		</thead>
+	<table cellpadding="0" cellspacing="0" border="0" id="example" class="table table-striped">
+
 		<tbody>
 			<?php 		
 			$items=0;
@@ -131,7 +114,7 @@
 					$remainder = $remainder % (60 * 60);
 					$minutes = floor($remainder / 60);
 					$seconds = $remainder % 60;
-
+					$lapse = '';
 					if($days > 0) {
 					//$oldLocale = setlocale(LC_TIME, 'pt_BR');
 					$item['timestamp'] = strftime("%b %#d %Y", $item['timestamp']);
@@ -156,7 +139,7 @@
 					print '<div class="article-meta">Posted '.$lapse.'&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Category: <a href="'.base_url().'?cat='.$item['cat_id'].'">'.$item['cat_name'].'</a>';
 				
 					print '</div>';
-					print "<hr /></td>
+					print "</td>
 				</tr>";
 
 					$items++;
