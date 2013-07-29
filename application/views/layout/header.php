@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title><?php echo $title?> | CSO Research Portal</title>
+    <title>Open County | <?php echo $title?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -12,7 +12,7 @@
     <link href="<?php echo base_url();?>assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/css/docs.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/js/google-code-prettify/prettify.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Domine:400,700|Yanone+Kaffeesatz:400,700,300|Sintony:400,700|Open+Sans:300|Alef:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family==Didact+Gothic|Roboto:400,300,700|Roboto+Slab:400,300,700|Oxygen:400,300,700|Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -34,11 +34,17 @@
   </head>
 
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
-  	<div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container top-cont" style="margin-top:-30px;">
-          <div class="brand">
-            <a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>assets/img/logo.png"></a>
+  	<div id="thenav" class="navbar navbar-inverse navbar-fixed-top" style="background-position: 0px 0px;">
+      <div class="navbar-inner top-cont" style="border-bottom: solid 3px rgba(91,25,24,0.9)">
+        <div class="container navigation-main">
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <h1 class="brand"><a href="<?php echo base_url()?>">Open County</a></h1>
+<!--               <li class="divider-vertical">
+                <a href="<?php echo base_url()?>?cat=about">About</a>
+                <a href="<?php echo base_url()?>?cat=contribute">Contribute</a>
+              </li> -->
+            </ul>
           </div>
           <div class="navbar-search search_menu input-append">
             <input type="text" placeholder="Search" class="search">
@@ -47,43 +53,21 @@
               </button>
           </div>
         </div>
-
-        <div class="container navigation-main">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="divider-vertical">
-                <a href="<?php echo base_url()?>">Home</a>
-              </li>
-              <li>
-                <a href="<?php echo base_url()?>?cat=1">Agriculture</a>
-              </li>
-<li>
-                <a href="<?php echo base_url()?>?cat=2">Education</a>
-              </li>
-<li>
-                <a href="<?php echo base_url()?>?cat=3">Water</a>
-              </li>
-              <li>
-                <a href="<?php echo base_url()?>?cat=5">Health</a>
-              </li>
-<li>
-                <a href="<?php echo base_url()?>?cat=4">Counties</a>
-              </li>
-              <!-- <li class="divider-vertical">
-                <a href="">Bogus Drs</a>
-              </li>
-           	  <li>
-                <a href="">Hospital Deaths</a>
-              </li> -->
-            </ul>
-          </div>
-        </div>
       </div>
+      <div class="container row-fluid tabs">
+        <div class="span12">
+          <div class="span7">
+            <h4>Lorem Ipsum Dolor Tagline</h4>
+          </div>
+          <div class="span5">
+            <div class="category-tab agri"><i class="icon-leaf icon-large"></i><h4>Agriculture</h4></div>
+            <div class="category-tab health"><i class="icon-ambulance icon-large"></i> <h4>Health</h4></div>
+            <div class="category-tab finance"><i class="icon-briefcase icon-large"></i><h4>Public Finance</h4></div>
+            <div class="category-tab counties"><i class="icon-check icon-large"></i><h4>Counties</h4></div>
+          </div>
+        </div><!-- span12 -->
+
+      </div> <!-- row-fluid container -->
     </div>
 
   

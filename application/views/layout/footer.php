@@ -15,6 +15,24 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
      <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
+     <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+
+     <script type="text/javascript">
+      $(document).ready(function() {
+        var headerTop = parseInt($('header').css('padding-top')) - $('#thenav').outerHeight();
+        $(window).scroll(function(){
+          var scrolled = $(window).scrollTop();
+          $('#thenav').css('background-position','0 '+(-(scrolled))+'px');
+          if (scrolled > headerTop) {
+            $('#thenav').addClass('onthego');
+          }
+          else {
+            $('#thenav').removeClass('onthego');
+          }
+        });
+      });
+    </script>
+
      <script>
      	var jq191 = $.noConflict();
      </script>

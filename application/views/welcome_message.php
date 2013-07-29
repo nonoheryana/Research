@@ -1,4 +1,29 @@
-<div class="container" style="margin-top: 15px; margin-bottom: 5px;">
+<div class="container" style="margin-top: 90px; margin-bottom: 5px;">
+	<div class="row tagline-description">
+		<div class="span6">
+			<h2>Lorem ipsum dolor sit amet subdescription about Open County</h2>
+		</div>
+	</div>
+	<div class="row-fluid">
+		<div class="ribbon span3">
+			<h3 class="flag">Latest</h3>
+		</div>
+	</div>
+
+	<div class="recent-items row-fluid">
+		<div class="featured span6">
+			<h4>Featured item</h4>
+			<p>Lorem ipsum dolor sit amet</p>
+		</div>
+		<div class="recent span3">
+			<h4>Recent items</h4>
+			<p>Lorem ipsum dolor sit amet</p>
+		</div>
+		<div class="recent span3">
+			<h4>Recent items</h4>
+			<p>Lorem ipsum dolor sit amet</p>
+		</div>
+	</div>
 	<?php
 					function first_paragraph($content) {
 
@@ -7,7 +32,7 @@
 					   
 					}
 				  ?>
-	<div class="row-fluid" style="min-height:600px;margin-top:65px;">
+	<div class="row-fluid" style="min-height:600px;margin-top:25px;">
 		<div class="span3 sidebar_widget2">
 
 			<script>        
