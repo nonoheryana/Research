@@ -8,8 +8,6 @@
 /* Custom CSS */
 
 .container {
-/*  border-left: 1px #DDDDDD solid;
-  border-right: 1px #DDDDDD solid;*/
   width: 960px !important;
 }
 
@@ -51,9 +49,25 @@
 
 .tabs h4 {
   color: #666;
-  font-family: 'Roboto';
+  font-family: 'Nunito';
   font-size: 28px;
   vertical-align: middle;
+}
+
+.agriculture {
+  background-color: rgb(46, 204, 113);
+}
+
+.health {
+  background-color: rgb(49, 143, 206);
+}
+
+.finance {
+  background-color: rgb(146, 84, 180);
+}
+
+.counties {
+  background-color: rgb(193, 54, 50);
 }
 
 .category-tab {
@@ -68,7 +82,7 @@
   text-align: center;
 }
 
-.category-tab i {
+.category-tab i, .category i {
   color: #fff;
   font-family: 'FontAwesome';
   vertical-align: middle;
@@ -79,22 +93,6 @@
   font-family: 'Roboto';
   font-size: 12px;
   font-weight: 400;
-}
-
-.category-tab.agri {
-  background-color: rgb(46, 204, 113);
-}
-
-.category-tab.health {
-  background-color: rgb(49, 143, 206);
-}
-
-.category-tab.finance {
-  background-color: rgb(146, 84, 180);
-}
-
-.category-tab.counties {
-  background-color: rgb(193, 54, 50);
 }
 
 .category-tab.selected {
@@ -159,7 +157,7 @@
   width: 0;
 }
 
-.recent-items div {
+.recent-items .featured, .recent-items .recent, .newsfeed .news-item {
   border: 1px #ccc solid;
   -moz-box-shadow: 0px 0px 2px #e6e6e6;
   -webkit-box-shadow: 0px 0px 2px #e6e6e6;
@@ -167,12 +165,107 @@
   padding: 4px 10px 4px 10px;
 }
 
-.recent-items div:hover {
+.recent-items .featured:hover, .recent-items .recent:hover, .newsfeed .news-item:hover {
   -moz-box-shadow: 0px 0px 5px #939393;
   -webkit-box-shadow: 0px 0px 5px #939393;
   box-shadow: 0px 0px 5px #939393;
 }
 
+.featured h4, .newsfeed h4 {
+  font-family: 'Roboto';
+  font-size: 22px;
+}
+
+.featured p, .newsfeed p {
+  font-family: 'Didact Gothic';
+  font-size: 16px;
+}
+
+.recent h4 {
+  font-size: 16px;
+}
+
+.recent p {
+  font-family: 'Didact Gothic';
+  font-size: 14px;
+}
+
+.recent-items h4, .newsfeed h4, .newsfeed h4 a {
+  color: #666;
+}
+
+.recent-items p, .newsfeed p {
+  color: #999;
+}
+
+.latest {
+  position: relative;
+}
+
+.category {
+  position: absolute;
+  right: 0px;
+}
+
+.latest .category {
+  height: 30%;
+  padding: 4px 10px;
+  top: 0px;
+}
+
+.feed-filters, .feed-filters tr td a {
+  color: #fff;
+}
+
+.filter-all {
+  background-color: #0088AA;
+}
+
+.filter-treaties {
+  background-color: #88AA00;
+}
+
+.filter-constitution {
+  background-color: #FF5555;
+}
+
+.filter-laws {
+  background-color: #FF7F2A;
+}
+
+.filter-papers {
+  background-color: #9D93AC;
+}
+
+.filter-policies {
+  background-color: #37ABC8;
+}
+
+.news-item .category {
+  bottom: 7px;
+  height: 12%;
+  padding: 4px 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.newsfeed {
+  background-color: transparent !important;
+  padding: 0px !important;
+}
+
+.news-item {
+  border: 1px solid #e6e6e6;
+  margin: 3px 0px 9px 0px;
+  padding: 8px;
+  position: relative;
+}
+
+.article-meta, .article-meta a {
+  color: #999;
+  font-size: 10px;
+  text-align: right;
+}
 
 /* Body and structure
 -------------------------------------------------- */

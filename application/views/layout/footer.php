@@ -36,7 +36,7 @@
      <script>
      	var jq191 = $.noConflict();
      </script>
-     
+   
     <script src="<?php echo base_url();?>assets/js/bootstrap-transition.js"></script>
     <script src="<?php echo base_url();?>assets/js/bootstrap-alert.js"></script>
     <script src="<?php echo base_url();?>assets/js/bootstrap-rowlink.js"></script>

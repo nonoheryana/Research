@@ -3,4 +3,9 @@
 */logs/!index.html
 */cache/*
 */cache/!index.html
+<<<<<<< HEAD
 *~
+=======
+*/config/config.php
+*/config/database.php
+>>>>>>> 06a5effe825afd067bdb03ac808e21873bde96d6
