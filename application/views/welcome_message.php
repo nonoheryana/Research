@@ -11,17 +11,20 @@
 	</div>
 
 	<div class="recent-items row-fluid">
-		<div class="featured span6">
+		<div class="featured span6 latest">
 			<h4>Featured item</h4>
 			<p>Lorem ipsum dolor sit amet</p>
+			<div class="category health"><i class="icon-ambulance"></i></div>
 		</div>
-		<div class="recent span3">
+		<div class="recent span3 latest">
 			<h4>Recent items</h4>
 			<p>Lorem ipsum dolor sit amet</p>
+			<div class="category agriculture"><i class="icon-leaf"></i></div>
 		</div>
-		<div class="recent span3">
+		<div class="recent span3 latest">
 			<h4>Recent items</h4>
 			<p>Lorem ipsum dolor sit amet</p>
+			<div class="category finance"><i class="icon-briefcase"></i></div>
 		</div>
 	</div>
 	<?php
@@ -90,25 +93,25 @@
 				  }
                 }
         </script>
-			<table class="table table-striped feed-filters">
+			<table class="table feed-filters">
 				<tbody>
 					<tr>
-						<td><a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(0, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(0);"';}?>>All</a><i class="icon-chevron-right" id="chev0"></i></td>
+						<td class="filter-all"><a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(0, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(0);"';}?>>All</a><i class="icon-chevron-right" id="chev0"></i></td>
 					</tr>
 					<tr>
-						<td><a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(1, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(1);"';}?>>International treaties</a><i class="icon-chevron-right" id="chev1"></i></td>
+						<td class="filter-treaties"><a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(1, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(1);"';}?>>International treaties</a><i class="icon-chevron-right" id="chev1"></i></td>
 					</tr>
 					<tr>
-						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(2, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(2);"';}?>>Constitution of Kenya</a><i class="icon-chevron-right" id="chev2"></i></td>
+						<td class="filter-constitution"><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(2, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(2);"';}?>>Constitution of Kenya</a><i class="icon-chevron-right" id="chev2"></i></td>
 					</tr>
 					<tr>
-						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(3, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(3);"';}?>>Laws of Kenya</a><i class="icon-chevron-right" id="chev3"></i></td>
+						<td class="filter-laws"><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(3, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(3);"';}?>>Laws of Kenya</a><i class="icon-chevron-right" id="chev3"></i></td>
 					</tr>
 					<tr>
-						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(4, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(4);"';}?>>Papers & Articles</a><i class="icon-chevron-right" id="chev4"></i></td>
+						<td class="filter-papers"><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(4, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(4);"';}?>>Papers & Articles</a><i class="icon-chevron-right" id="chev4"></i></td>
 					</tr>
 					<tr>
-						<td><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(5, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(5);"';}?>>Policies and Guidelines</a><i class="icon-chevron-right" id="chev5"></i></td>
+						<td class="filter-policies"><a <a <?php if(isset($_GET['cat'])){ print 'onclick="filter_feed_cat(5, '.$_GET['cat'].');"';}else{ print 'onclick="filter_feed(5);"';}?>>Policies and Guidelines</a><i class="icon-chevron-right" id="chev5"></i></td>
 					</tr>
 				</tbody>
 			</table>
@@ -123,10 +126,6 @@
 		
 		<div class="span6 newsfeed" id="filtered">
 
-<div class="demo_jui">
-	<table cellpadding="0" cellspacing="0" border="0" id="example" class="table table-striped">
-
-		<tbody>
 			<?php 		
 			$items=0;
 			  	foreach($more_news as $item){
@@ -158,23 +157,22 @@
 					//end timeplay
 
 					$description = first_paragraph($item['content']);
-					print "<tr class='gradeA'><td>";
+					// print "<tr class='gradeA'><td>";
+					print '<div class="news-item">';
 			  		print "<h4><a href='".base_url()."index.php/article?id=".$item['id']."'>".$item['title']."</a></h4>";
 					print "<p href='".base_url()."index.php/article?id=".$item['id']."'>".$description."</p><br />";
-					print '<div class="article-meta">Posted '.$lapse.'&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Category: <a href="'.base_url().'?cat='.$item['cat_id'].'">'.$item['cat_name'].'</a>';
+					print '<div class="article-info"><div class="article-meta"><a href="'.base_url().'?cat='.$item['cat_id'].'">'.$item['cat_name'].'</a>&nbsp;<br />'.$lapse.'</div><div class="category health"><i class="icon-ambulance"></i></div>';
 				
 					print '</div>';
-					print "</td>
-				</tr>";
+					print '</div>';
+				// 	print "</td>
+				// </tr>";
 
 					$items++;
 					
 					}
 			  	}
 				?>
-		</tbody>
-	</table>
-</div>
 
 
 </div>
