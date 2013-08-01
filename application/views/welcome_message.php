@@ -11,7 +11,7 @@
 	</div>
 
 	<div class="recent-items row-fluid">
-		<div class="featured span6 latest">
+		<div class="featured span6 latest" style="height:210px;">
 			<h4>Featured item</h4>
 			<p>Lorem ipsum dolor sit amet</p>
 			<div class="category health"><i class="icon-ambulance"></i></div>
@@ -25,6 +25,16 @@
 			<h4>Recent items</h4>
 			<p>Lorem ipsum dolor sit amet</p>
 			<div class="category finance"><i class="icon-briefcase"></i></div>
+		</div>
+		<div class="recent span3 latest">
+			<h4>Recent items</h4>
+			<p>Lorem ipsum dolor sit amet</p>
+			<div class="category health"><i class="icon-ambulance"></i></div>
+		</div>
+		<div class="recent span3 latest">
+			<h4>Recent items</h4>
+			<p>Lorem ipsum dolor sit amet</p>
+			<div class="category counties"><i class="icon-check"></i></div>
 		</div>
 	</div>
 	<?php
