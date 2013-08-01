@@ -12,8 +12,8 @@
 
 	<div class="recent-items row-fluid">
 		<div class="featured span6 latest" style="height:210px;">
-			<h4>Featured item</h4>
-			<p>Lorem ipsum dolor sit amet</p>
+			<h4><?php print $featured['title'];?></h4>
+			<p style="text-align:justify; padding:5px;padding-right:30px"><?php print substr($featured['content'], 0, 300)?>...</p>
 			<div class="category health"><i class="icon-ambulance"></i></div>
 		</div>
 		<div class="recent span3 latest">

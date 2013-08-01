@@ -1,7 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Welcome_m extends CI_Model {
  
-
+  public function get_featured(){
+	$this->db->select("news.*, UNIX_TIMESTAMP() - timestamp AS TimeSpent, timestamp, categories.*");
+	$this->db->from("news");	
+	$this->db->join("categories", "categories.cat_id=news.category");
+	$this->db->where("news.featured", "1");
+	$this->db->order_by("id", "desc");
+	$this->db->limit(1);
+	$result = $this->db->get();
+	$news = $result->result_array();
+	return $news[0];
+  }
   public function get_all(){
  	
 	$this->db->select("news.*, UNIX_TIMESTAMP() - timestamp AS TimeSpent, timestamp, categories.*");
