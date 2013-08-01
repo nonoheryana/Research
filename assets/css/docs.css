@@ -6,7 +6,9 @@
 */
 
 /* Custom CSS */
-
+.icon-chevron-right {
+float: right;
+}
 .container {
   width: 960px !important;
 }
@@ -81,7 +83,9 @@
   padding: 4px 4px 4px 4px;
   text-align: center;
 }
-
+.category-tab:hover {
+padding-top:14px;
+}
 .category-tab i, .category i {
   color: #fff;
   font-family: 'FontAwesome';

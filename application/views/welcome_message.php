@@ -1,5 +1,5 @@
 <div class="container" style="margin-top: 90px; margin-bottom: 5px;">
-	<div class="row tagline-description">
+	<div class="row tagline-description" style="display:none;">
 		<div class="span6">
 			<h2>Lorem ipsum dolor sit amet subdescription about Open County</h2>
 		</div>

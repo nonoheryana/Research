@@ -58,7 +58,7 @@
       <div class="container row-fluid tabs">
         <div class="span12">
           <div class="span7">
-            <!-- <h4>Lorem Ipsum Dolor Tagline</h4> -->
+            <h4>Lorem Ipsum Dolor Tagline</h4>
           </div>
 		<script type="text/javascript">
 		$(document).ready(function() {
@@ -73,10 +73,18 @@
 			}
 		</style>
           <div class="span5">
-<div class="category-tab agriculture anchor" title="<?php echo base_url();?>?cat=1"><i class="icon-leaf icon-large"></i><h4>Agriculture</h4></div>
-            <div class="category-tab health anchor" title="<?php echo base_url();?>?cat=2"><i class="icon-ambulance icon-large"></i> <h4>Health</h4></div>
-            <div class="category-tab finance anchor" title="<?php echo base_url();?>?cat=3"><i class="icon-briefcase icon-large"></i><h4>Public Finance</h4></div>
-            <div class="category-tab counties anchor" title="<?php echo base_url();?>?cat=4"><i class="icon-check icon-large"></i><h4>Counties</h4></div>
+<?php
+	function paddle ($cat){
+	 if(isset($_GET['cat'])&&$_GET['cat']==$cat)
+		{
+			print " style='padding-top:14px !important'";
+		}
+	}
+?>
+<div class="category-tab agriculture anchor" title="<?php echo base_url();?>?cat=1"<?php paddle(1)?>><i class="icon-leaf icon-large"></i><h4>Agriculture</h4></div>
+            <div class="category-tab health anchor" title="<?php echo base_url();?>?cat=2"<?php paddle(2)?>><i class="icon-ambulance icon-large"></i> <h4>Health</h4></div>
+            <div class="category-tab finance anchor" title="<?php echo base_url();?>?cat=3"<?php paddle(3)?>><i class="icon-briefcase icon-large"></i><h4>Public Finance</h4></div>
+            <div class="category-tab counties anchor" title="<?php echo base_url();?>?cat=4"<?php paddle(4)?>><i class="icon-check icon-large"></i><h4>Counties</h4></div>
           </div>
         </div><!-- span12 -->
 
