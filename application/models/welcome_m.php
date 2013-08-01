@@ -12,6 +12,16 @@ class Welcome_m extends CI_Model {
 	$news = $result->result_array();
 	return $news[0];
   }
+  public function get_latest($cat){
+  	$this->db->select("news.*, UNIX_TIMESTAMP() - timestamp AS TimeSpent, timestamp, categories.*");
+	$this->db->from("news");
+	$this->db->join("categories", "categories.cat_id=news.category");
+	$this->db->where("news.category", $cat);
+	$this->db->order_by("id", "desc");
+	$this->db->limit(3);
+	$result = $this->db->get();
+	return $result->result_array();
+  }
   public function get_all(){
  	
 	$this->db->select("news.*, UNIX_TIMESTAMP() - timestamp AS TimeSpent, timestamp, categories.*");

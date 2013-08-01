@@ -19,6 +19,12 @@ class Welcome extends CI_Controller {
 		}else{
 			$data['more_news'] = $this->welcome_m->get_all_cat($cat);
 		}
+		//get latest from different categories
+		$data['agriculture_latest'] = $this->welcome_m->get_latest(1);
+		$data['health_latest'] = $this->welcome_m->get_latest(2);
+		$data['finance_latest'] = $this->welcome_m->get_latest(3);
+		$data['counties_latest'] = $this->welcome_m->get_latest(4);
+		//get featured article
 		$data['featured'] = $this->welcome_m->get_featured();
 		
 		$this->load->view('layout/header.php', $data);	

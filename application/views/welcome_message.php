@@ -17,23 +17,47 @@
 			<div class="category health"><i class="icon-ambulance"></i></div>
 		</div>
 		<div class="recent span3 latest">
-			<h4>Recent items</h4>
-			<p>Lorem ipsum dolor sit amet</p>
+			<h4>Agriculture</h4>
+			<p>
+				<?php 
+					foreach($agriculture_latest as $agric){
+						print '<a href="'.base_url().'index.php/article?id='.$agric['id'].'">'.$agric['title'].'</a><br />';
+					}
+				?>
+			</p>	
 			<div class="category agriculture"><i class="icon-leaf"></i></div>
 		</div>
 		<div class="recent span3 latest">
-			<h4>Recent items</h4>
-			<p>Lorem ipsum dolor sit amet</p>
+			<h4>Finance</h4>
+			<p>
+				<?php 
+					foreach($finance_latest as $f){
+							print '<a href="'.base_url().'index.php/article?id='.$f['id'].'">'.$f['title'].'</a><br />';
+					}
+				?>
+			</p>
 			<div class="category finance"><i class="icon-briefcase"></i></div>
 		</div>
 		<div class="recent span3 latest">
-			<h4>Recent items</h4>
-			<p>Lorem ipsum dolor sit amet</p>
+			<h4>Health</h4>
+			<p>
+				<?php 
+					foreach($health_latest as $h){
+							print '<a href="'.base_url().'index.php/article?id='.$h['id'].'">'.$h['title'].'</a><br />';
+					}
+				?>
+			</p>
 			<div class="category health"><i class="icon-ambulance"></i></div>
 		</div>
 		<div class="recent span3 latest">
-			<h4>Recent items</h4>
-			<p>Lorem ipsum dolor sit amet</p>
+			<h4>Counties</h4>
+			<p>
+				<?php 
+					foreach($counties_latest as $c){
+							print '<a href="'.base_url().'index.php/article?id='.$c['id'].'">'.$c['title'].'</a><br />';
+					}
+				?>
+			</p>
 			<div class="category counties"><i class="icon-check"></i></div>
 		</div>
 	</div>
