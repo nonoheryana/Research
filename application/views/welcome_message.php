@@ -69,6 +69,7 @@
 					   
 					}
 				  ?>
+			
 	<div class="row-fluid" style="min-height:600px;margin-top:25px;">
 		<div class="span3 sidebar_widget2">
 
@@ -159,7 +160,7 @@
 		</script>
 		
 		<div class="span6 newsfeed" id="filtered">
-
+		
 			<?php 		
 			$items=0;
 			  	foreach($more_news as $item){
