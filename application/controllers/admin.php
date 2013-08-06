@@ -65,6 +65,7 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/footer', $data);
 	}
 	public function add_documents_process(){
+
 			$this->load->model('admin_model');
 			$data['result'] = $this->admin_model->process_add($_POST, $_FILES);
 		
@@ -76,6 +77,8 @@ class Admin extends CI_Controller {
 			$this->load->view('admin/header_admin',$data);
 			$this->load->view('admin/add_document', $data);
 			$this->load->view('admin/footer', $data);
+		 
+		 
 	}
 	public function edit_documents_process(){
 			$id = $_POST['id'];

@@ -5,7 +5,7 @@
 ?>
 <form style="margin-top:10px;" method="post" action="<?php echo base_url()?>index.php/admin/add_documents_process" enctype="multipart/form-data">
 	<h3>Add New Document</h3>
-	<input type="text" name="title" placeholder="Title">
+	<input type="text" name="title" placeholder="Title" class="input">
 	<br/>
 	<textarea name="abstract" placeholder="abstract">
 		
@@ -26,6 +26,8 @@
 			}
 		?>
 	</select>
+	<br />
+	<input type="checkbox" name="featured" value="featured">Featured<br />
 <br />
 	<input type="file" name="file">
 	<br />
