@@ -1,7 +1,7 @@
  <div class="navbar navbar-inverse navbar-bottom">
       <div class="navbar-inner">
         <div class="container">
-			     <p>
+			     <p style="font-size:10px;color:grey;text-align:center">
               Copyright (c) 2013 <a href="http://the-star.co.ke" target="_blank">Open Institute</a> 
               | Built by <a href="http://code4kenya.org" target="_blank">Open Institute</a> 
               | Available on <a href="http://github.com/OpenInstitute/Research" target="_blank">Github</a>
