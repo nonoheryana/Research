@@ -65,7 +65,7 @@ class Welcome extends CI_Controller {
 			
 			$this->load->view('layout/header',$data);
 			$this->load->view('layout/header_widgets', $data);
-			$this->load->view('add_document', $data);
+			$this->load->view('add_document_public', $data);
 			
 			$this->load->view('layout/footer', $data);
 	}
