@@ -217,7 +217,7 @@
 			You can contribute an article <a href="<?php echo base_url()?>index.php/welcome/add_document">here</a>
 			<hr />
 			<div style="text-align:center">
-				<img src="<?php echo base_url();?>assets/img/oi.png" width="200px">
+				<img src="<?php echo base_url();?>assets/img/oi.png" width="140px">
 			</div>
 			<hr />
 			<div class="social_media_icons">
