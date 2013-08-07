@@ -43,15 +43,15 @@ class Welcome extends CI_Controller {
 		$data['filtered_feed'] = $this->welcome_m->get_filtered_feed($section);
 		}
 		if($section==1){
-			$data['title'] = "Latest";
+			$data['title'] = "International treaties";
 		}elseif($section==2){
-			$data['title'] = "Features";
+			$data['title'] = "Constitution of Kenya";
 		}elseif($section==3){
-			$data['title'] = "Opinion";
+			$data['title'] = "Laws of Kenya";
 		}elseif($section==4){
-			$data['title'] = "News";
-		}else{
-			$data['title'] = "Other Health News";
+			$data['title'] = "Papers & Articles";
+		}elseif($section==5){
+			$data['title']= "Policies and Guidelines";
 		}
 		$this->load->view('filtered', $data);
 	}

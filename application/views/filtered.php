@@ -1,5 +1,5 @@
-	<div class="row-header"><h3><?php print "$title";?></h3></div>
-
+<?php if(isset($title)){?>	<div class="row-header"><h3><?php print "$title";?></h3></div>
+<?php }?>
 <div class="demo_jui">
 	<table cellpadding="0" cellspacing="0" border="0" class="table table-striped" id="example">
 
